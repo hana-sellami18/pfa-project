@@ -1,0 +1,19 @@
+ 
+# Python
+.venv/
+.venv311/
+.venv314/
+__pycache__/
+*.pyc
+instance/
+
+# IDE
+.idea/
+
+# Modèles IA (trop lourds pour Git)
+LaMini-Flan-T5-248M/
+gpt4all/
+
+# Divers
+=2.7.4
+.env
