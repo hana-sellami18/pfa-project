@@ -14,7 +14,6 @@ from langchain.text_splitter import RecursiveCharacterTextSplitter
 from nltk.tokenize import sent_tokenize
 import tempfile, os, torch, nltk, logging
 
-# ================= INIT =================
 try:
     nltk.data.find("tokenizers/punkt")
 except LookupError:
