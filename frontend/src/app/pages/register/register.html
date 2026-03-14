@@ -1,0 +1,65 @@
+<div class="auth-container">
+  <h1>Créer un compte</h1>
+  <form (ngSubmit)="onSubmit()" #registerForm="ngForm">
+    <input
+      type="email"
+      name="email"
+      [(ngModel)]="email"
+      placeholder="Adresse e-mail"
+      required
+    />
+
+    <input
+      type="text"
+      name="username"
+      [(ngModel)]="username"
+      placeholder="Nom d'utilisateur"
+      required
+    />
+
+    <input
+      type="password"
+      name="password"
+      [(ngModel)]="password"
+      placeholder="Mot de passe"
+      required
+    />
+
+    <input
+      type="password"
+      name="confirmPassword"
+      [(ngModel)]="confirmPassword"
+      placeholder="Confirmez le mot de passe"
+      required
+    />
+
+    <button type="submit">S'inscrire</button>
+  </form>
+
+  <div *ngIf="errorMessage" style="color: red; margin-top: 10px;">
+    {{ errorMessage }}
+  </div>
+
+  <div class="divider">
+    <hr />
+    <span>ou</span>
+    <hr />
+  </div>
+
+  <div class="auth-buttons">
+    <button (click)="signInWithGoogle()" class="auth-btn google" type="button" style="display:flex; align-items:center; justify-content:center; gap:8px;">
+      <!-- Google G en SVG avec couleurs officielles -->
+      <svg width="18" height="18" viewBox="0 0 533.5 544.3" xmlns="http://www.w3.org/2000/svg" >
+        <path fill="#4285F4" d="M533.5 278.4c0-18.5-1.5-36.2-4.4-53.5H272v101.2h146.9c-6.3 34.4-25.6 63.5-54.6 83.1v68h88.2c51.5-47.5 81-117.2 81-198.8z"/>
+        <path fill="#34A853" d="M272 544.3c73.6 0 135.5-24.3 180.7-65.9l-88.2-68c-24.5 16.5-55.8 26.2-92.5 26.2-71 0-131.2-47.9-152.8-112.3h-90v70.6c45.8 90.4 140.2 150.4 242.8 150.4z"/>
+        <path fill="#FBBC05" d="M119.2 321.3c-11.9-35.5-11.9-73.8 0-109.3v-70.6h-90c-37.3 72.5-37.3 158.8 0 231.3l90-51.4z"/>
+        <path fill="#EA4335" d="M272 107.7c39.8 0 75.5 13.7 103.7 40.7l77.7-77.7C408.4 24.8 345.5 0 272 0 169.4 0 75 60 29.2 150.4l90 70.6c21.6-64.4 81.8-112.3 152.8-112.3z"/>
+      </svg>
+      Continuer avec Google
+    </button>
+  </div>
+
+  <p class="login-link">
+    Vous avez déjà un compte ? <a routerLink="/login">Connectez-vous</a>
+  </p>
+</div>

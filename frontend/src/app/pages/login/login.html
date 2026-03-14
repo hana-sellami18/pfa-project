@@ -1,0 +1,35 @@
+<div class="auth-container">
+  <h1>Bienvenue à nouveau</h1>
+
+  <form (ngSubmit)="onSubmit()" #loginForm="ngForm">
+    <input type="email" name="email" [(ngModel)]="email" placeholder="Adresse e-mail" required />
+    <input type="password" name="password" [(ngModel)]="password" placeholder="Mot de passe" required />
+    <button type="submit">Se connecter</button>
+    <p class="error" *ngIf="errorMessage">{{ errorMessage }}</p>
+  </form>
+
+  <div class="divider">
+    <hr />
+    <span>ou</span>
+    <hr />
+  </div>
+
+  <div class="auth-buttons">
+    <button (click)="signInWithGoogle()" class="auth-btn google">
+      <!-- Logo Google multicolor SVG -->
+      <svg class="google-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 46 46" width="20" height="20" aria-hidden="true" focusable="false">
+        <path fill="#4285F4" d="M23 9.5c3.54 0 6.62 1.24 8.88 3.27l6.63-6.63C33.94 2.58 28.92 1 23 1 14.73 1 7.16 5.86 3.75 13.22l7.9 6.14C12.54 13.33 17.26 9.5 23 9.5z"/>
+        <path fill="#34A853" d="M44.5 23c0-1.45-.14-2.85-.4-4.2H23v8h11.93c-.5 2.73-2.14 5.05-4.56 6.59l7 5.44C41.85 34.43 44.5 29.05 44.5 23z"/>
+        <path fill="#FBBC05" d="M11.65 27.94a13.6 13.6 0 01-.7-4.94c0-1.7.3-3.34.82-4.89L3.75 13.22A22.5 22.5 0 001 23c0 3.52 1 6.77 2.75 9.56l7.9-6.14z"/>
+        <path fill="#EA4335" d="M23 44c5.92 0 10.94-1.95 14.58-5.3l-7-5.44c-1.97 1.3-4.5 2.1-7.58 2.1-5.74 0-10.46-3.83-11.77-8.99l-7.9 6.14C7.16 40.14 14.73 45 23 45z"/>
+        <path fill="none" d="M1 1h45v45H1z"/>
+      </svg>
+      Continuer avec Google
+    </button>
+  </div>
+
+  <p class="register-link">
+    Vous n'avez pas de compte ?
+    <a routerLink="/register">Inscrivez-vous</a>
+  </p>
+</div>

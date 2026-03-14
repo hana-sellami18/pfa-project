@@ -1,0 +1,127 @@
+.auth-container {
+  max-width: 400px;
+  margin: 80px auto;
+  padding: 40px 20px;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  font-family: sans-serif;
+}
+
+.auth-container h1 {
+  margin-bottom: 24px;
+  font-size: 24px;
+  color: #111;
+}
+
+.auth-container input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 14px;
+  color: #111;
+}
+
+.auth-container input::placeholder {
+  color: #999;
+}
+
+.auth-container button[type="submit"] {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  background-color: #111;
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.auth-container button[type="submit"]:hover {
+  background-color: #333;
+}
+
+
+.auth-container .link-text {
+  font-size: 13px;
+  margin-top: 10px;
+}
+
+.auth-container .link-text a {
+  color: #4a5ef5;
+  text-decoration: none;
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  margin: 24px 0;
+  color: #999;
+  font-size: 12px;
+}
+
+.divider hr {
+  flex: 1;
+  border: none;
+  border-top: 1px solid #eee;
+}
+
+.divider span {
+  margin: 0 10px;
+}
+
+.auth-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.auth-btn {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 25px;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.auth-btn.google {
+  border-color: #dadce0;
+}
+
+.auth-btn.google:hover {
+  background-color: #f7f7f7;
+  border-color: #c6c6c6;
+}
+
+.auth-btn i,
+.auth-btn svg {
+  margin-right: 8px;
+}
+
+.login-link {
+  margin-top: 15px;
+  font-size: 14px;
+  color: #111;
+}
+
+.login-link a {
+  color: #111; /* orange ASM */
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.login-link a:hover {
+  text-decoration: underline;
+  color: #FF6F00;
+}

@@ -1,0 +1,39 @@
+<div class="header">
+  <div class="logo">LOGO</div>
+  <div class="user-info">
+    <a href="/logout">Logout</a>
+    <i class="fa-solid fa-eye header-eye" title="Voir"></i>
+  </div>
+</div>
+
+<h2 class="title">Mes Résumés</h2>
+
+<div *ngIf="resumes.length === 0" class="empty">
+  Aucun résumé trouvé.
+</div>
+
+<div *ngFor="let resume of resumes" class="resume-card">
+  <div class="icon">
+    <i class="fa-solid fa-file-lines"></i>
+  </div>
+  <div class="resume-content">
+    <h3>{{ resume.date }}</h3>
+    <p><strong>Méthode :</strong> {{ resume.methode }}</p>
+
+    <div *ngIf="resumeAfficheId === resume.id" class="texte-resume">
+      <hr />
+      <p>{{ resume.texte_resume }}</p>
+    </div>
+  </div>
+  <div class="actions">
+    <span class="link" (click)="voir(resume)">
+      <i class="fa-solid fa-eye"></i> Voir
+    </span>
+    <span class="link" (click)="telecharger(resume)">
+      <i class="fa-solid fa-download"></i> Télécharger
+    </span>
+    <span class="link danger" (click)="supprimer(resume)">
+      <i class="fa-solid fa-trash"></i> Supprimer
+    </span>
+  </div>
+</div>

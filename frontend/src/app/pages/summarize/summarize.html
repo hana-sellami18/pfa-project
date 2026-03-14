@@ -1,0 +1,59 @@
+<div class="wrapper">
+  <div class="title">Résumé IA Gratuit</div>
+
+  <!-- Sélecteurs -->
+  <div class="top-bar">
+    <div class="select-group">
+      <label for="method">Méthode :</label>
+      <select id="method" [(ngModel)]="method">
+        <option value="extractive">Extractive</option>
+        <option value="abstractive">Abstractive</option>
+      </select>
+    </div>
+
+
+
+    <div class="select-group">
+      <label for="nbSentences">Nombre de phrases :</label>
+      <input id="nbSentences" type="number" [(ngModel)]="nbSentences" min="1" max="10" />
+    </div>
+  </div>
+
+  <!-- Zone principale -->
+  <div class="card">
+    <!-- Partie gauche -->
+    <div class="input-side">
+      <textarea [(ngModel)]="inputText" placeholder="Écris ou colle ton texte ici…"></textarea>
+
+      <label class="pdf-mini">
+        <input type="file" (change)="onFileSelected($event)" hidden />
+        <span class="upload-label">📄 PDF</span>
+        <div class="file-name" *ngIf="pdfFile">{{ pdfFile.name }}</div>
+      </label>
+
+      <div class="error" *ngIf="errorMessage">{{ errorMessage }}</div>
+    </div>
+
+    <!-- Partie droite -->
+    <div class="output-side">
+      <div class="output-box">
+        {{ summary || 'Le résumé s’affichera ici.' }}
+      </div>
+    </div>
+  </div>
+
+  <!-- Boutons Résumer / Réinitialiser / Copier / Télécharger -->
+  <div class="actions-outside">
+    <div class="left-actions">
+      <button (click)="generateSummary()" [disabled]="loading">
+        {{ loading ? 'Chargement...' : 'Résumer' }}
+      </button>
+      <button (click)="reset()" class="secondary">Réinitialiser</button>
+    </div>
+
+    <div class="right-actions">
+      <button (click)="copyToClipboard()" [disabled]="!summary">Copier</button>
+      <button (click)="downloadSummary()" [disabled]="!summary">Télécharger</button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,106 @@
+/* ===== Police ===== */
+body {
+  font-family: 'Nunito', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* ===== NAVBAR ===== */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  background: #121212;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  z-index: 1000;
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 20px;
+  color: #FF6F00;
+}
+
+/* Icônes à droite */
+.navbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.login-icon,
+.burger {
+  font-size: 20px;
+  cursor: pointer;
+  color:  #FF6F00;
+  transition: color 0.2s ease;
+}
+
+.login-icon:hover,
+.burger:hover {
+  color: #FF6F00;
+}
+
+/* ===== SIDEBAR ===== */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -250px;
+  width: 250px;
+  height: 100%;
+  background: #f9f9f9;
+  box-shadow: 2px 0 5px rgba(0,0,0,0.2);
+  padding-top: 60px;
+  transition: left 0.3s ease-in-out;
+  z-index: 999;
+}
+
+.sidebar.open {
+  left: 0;
+}
+
+.sidebar .close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0 20px;
+  margin: 0;
+}
+
+.sidebar ul li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 15px 0;
+  font-size: 16px;
+  cursor: pointer;
+  border-bottom: 1px solid #ddd;
+}
+
+.sidebar ul li:hover {
+  background-color: #e6f0ff;
+}
+
+/* ===== OVERLAY ===== */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.4);
+  z-index: 998;
+  display: none;
+}

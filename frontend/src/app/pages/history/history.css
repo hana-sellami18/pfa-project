@@ -1,0 +1,133 @@
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  background-color: #f9f9f9;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.user-info a {
+  color: #2a62ff;
+  text-decoration: none;
+  margin-left: 10px;
+  font-weight: 600;
+  font-size: 13px;
+}
+
+.user-info a:hover {
+  text-decoration: underline;
+}
+
+.header-eye {
+  font-size: 16px;
+  color: #2a62ff;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.header-eye:hover {
+  color: orange;
+}
+
+/* Titre principal */
+.title {
+  font-size: 25px;
+  font-weight: bold;
+  margin: 30px;
+  text-align: center;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+
+}
+
+/* Carte de résumé */
+.resume-card {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  margin: 10px 150px;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 1px 5px rgba(0,0,0,0.1);
+  font-size: 13px; /* taille par défaut du texte dans la carte */
+}
+
+/* Icône PDF */
+.icon {
+  font-size: 32px;
+  margin-right: 16px;
+  color: #FF6F00; /* Couleur orange pour l'icône PDF */
+}
+
+/* Contenu du résumé */
+.resume-content {
+  flex: 1;
+}
+
+/* Titre "Résumé du..." */
+.resume-card h3 {
+  font-size: 16px;
+  margin-bottom: 6px;
+}
+
+/* Texte d'information (méthode, date...) */
+.resume-card p {
+  font-size: 15px;
+  margin: 4px 0;
+
+}
+
+.resume-card strong {
+  font-size: 15px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+
+}
+
+/* Actions (voir, télécharger, supprimer) */
+.actions {
+  display: flex;
+  gap: 10px;
+  font-size: 13px;
+  align-items: center;
+}
+
+.link {
+  cursor: pointer;
+  color: black;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 600;
+  font-size: 13px;
+}
+
+.link:hover {
+  color: #FF6F00;
+}
+
+.link.danger {
+  color: black;
+}
+
+.link.danger:hover {
+  color: #FF6F00;
+}
+
+/* Message vide */
+.empty {
+  margin: 20px;
+  font-style: italic;
+  text-align: center;
+  color: #666;
+  font-size: 13px;
+}
